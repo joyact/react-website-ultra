@@ -1,11 +1,30 @@
-import React from 'react';
-import { Nav, NavbarContainer } from './Navbar.elements';
+import React, { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import {
+  Nav,
+  NavbarContainer,
+  NavLogo,
+  NavIcon,
+  HamburgerIcon,
+} from './Navbar.elements';
 
 function Navbar() {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
+
   return (
     <>
       <Nav>
-        <NavbarContainer>TEXT</NavbarContainer>
+        <NavbarContainer>
+          <NavLogo to="/">
+            <NavIcon />
+            ULTRA
+          </NavLogo>
+          <HamburgerIcon onClick={handleClick}>
+            {click ? <FaBars /> : <FaTimes />}
+          </HamburgerIcon>
+        </NavbarContainer>
       </Nav>
     </>
   );
