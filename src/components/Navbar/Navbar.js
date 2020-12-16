@@ -6,6 +6,9 @@ import {
   NavLogo,
   NavIcon,
   HamburgerIcon,
+  NavMenu,
+  NavItem,
+  NavLinks,
 } from './Navbar.elements';
 
 function Navbar() {
@@ -22,8 +25,19 @@ function Navbar() {
             ULTRA
           </NavLogo>
           <HamburgerIcon onClick={handleClick}>
-            {click ? <FaBars /> : <FaTimes />}
+            {click ? <FaTimes /> : <FaBars />}
           </HamburgerIcon>
+          <NavMenu onClick={handleClick} click={click}>
+            <NavItem>
+              <NavLinks to="/">Home</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="/services">Services</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="/products">Products</NavLinks>
+            </NavItem>
+          </NavMenu>
         </NavbarContainer>
       </Nav>
     </>
