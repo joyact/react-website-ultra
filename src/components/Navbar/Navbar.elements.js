@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import { Container } from '../../globalStyle';
+import { FaMagento } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 export const Nav = styled.div`
   background: #aaa;
@@ -12,8 +15,10 @@ export const Nav = styled.div`
   z-index: 999;
 `;
 
-export const NavbarContainer = styled.div`
+export const NavbarContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   height: 80px;
+
+  ${Container}
 `;
