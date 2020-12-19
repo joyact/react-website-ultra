@@ -12,11 +12,16 @@ import {
 import { Button, Container } from '../../globalStyle';
 
 function InfoSection({
+  primary,
   lightBg,
   imgStart,
   lightTopLine,
   lightText,
   lightTextDesc,
+  topLine,
+  headline,
+  description,
+  buttonLabel,
 }) {
   return (
     <>
@@ -25,11 +30,13 @@ function InfoSection({
           <InfoRow imgStart={imgStart}>
             <InfoColumn>
               <TextWrapper>
-                <TopLine lightTopLine={lightTopLine}></TopLine>
-                <Heading lightText={lightText}></Heading>
-                <Subtitle lightTextDesc={lightTextDesc}></Subtitle>
+                <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
+                <Heading lightText={lightText}>{headline}</Heading>
+                <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
                 <Link to="/sign-up">
-                  <Button big fontBig></Button>
+                  <Button big fontBig primary={primary}>
+                    {buttonLabel}
+                  </Button>
                 </Link>
               </TextWrapper>
             </InfoColumn>
