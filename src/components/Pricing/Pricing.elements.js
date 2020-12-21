@@ -38,6 +38,7 @@ export const Container = styled.div`
 `;
 
 export const PricingColumn = styled(Link)`
+  display: flex;
   width: 280px;
   height: 500px;
   background: #242424;
@@ -50,8 +51,8 @@ export const PricingColumn = styled(Link)`
   }
 
   &:hover {
-    transform: scale(1.06);
-    transition: all 0.3s ease-out;
+    transform: scale(1.03);
+    transition: all 0.3s ease-in-out;
     color: #1c2237;
   }
 
@@ -66,4 +67,35 @@ export const PricingColumn = styled(Link)`
 export const PricingInfo = styled.div`
   padding: 24px;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+`;
+
+export const Plan = styled.h3`
+  margin-bottom: 5px;
+  font-size: 24px;
+`;
+
+export const Cost = styled.h4`
+  font-size: 40px;
+`;
+
+export const Length = styled.p`
+  font-size: 14px;
+`;
+
+export const Features = styled.ul`
+  margin: 40px 0 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #a9b3c1;
+  list-style: none;
+`;
+
+export const FeatureText = styled.li`
+  margin-bottom: 10px;
 `;
