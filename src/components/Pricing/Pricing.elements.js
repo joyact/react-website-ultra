@@ -74,6 +74,10 @@ export const PricingInfo = styled.div`
   flex: 1;
 `;
 
+export const Icon = styled.div`
+  margin-bottom: 24px;
+`;
+
 export const Plan = styled.h3`
   margin-bottom: 5px;
   font-size: 24px;
